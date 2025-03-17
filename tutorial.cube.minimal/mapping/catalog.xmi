@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:roma="https://www.daanse.org/spec/org.eclipse.daanse.rolap.mapping">
+  <roma:Catalog id="_cat" name="Cube - Minimal" cubes="_cube" dbschemas="_dbschema"/>
+  <roma:DatabaseSchema id="_dbschema">
+    <tables xsi:type="roma:PhysicalTable" id="_tab" name="Fact">
+      <columns xsi:type="roma:PhysicalColumn" id="_col_key" name="KEY"/>
+      <columns xsi:type="roma:PhysicalColumn" id="_col_value" name="VALUE" type="Integer"/>
+    </tables>
+  </roma:DatabaseSchema>
+  <roma:TableQuery id="_query" table="_tab"/>
+  <roma:PhysicalCube id="_cube" name="MinimalCube" query="_query">
+    <measureGroups>
+      <measures id="_measure" name="Measure-Sum" column="_col_value" aggregator="sum"/>
+    </measureGroups>
+  </roma:PhysicalCube>
+</xmi:XMI>

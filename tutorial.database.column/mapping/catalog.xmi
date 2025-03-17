@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:roma="https://www.daanse.org/spec/org.eclipse.daanse.rolap.mapping">
+  <roma:Catalog id="_cat" name="Database - ColumnTypes" dbschemas="_dbschema"/>
+  <roma:DatabaseSchema id="_dbschema">
+    <tables xsi:type="roma:PhysicalTable" id="_tab" name="TableWithColumnTypes">
+      <columns xsi:type="roma:PhysicalColumn" id="_col1" description="Non nullable Column with description" name="ColumnWithDescription" nullable="true"/>
+      <columns xsi:type="roma:PhysicalColumn" id="_col2" name="ColumnVarchar" columnSize="255"/>
+      <columns xsi:type="roma:PhysicalColumn" id="_col3" name="ColumnDecimal" type="Decimal" decimalDigits="2" numPrecRadix="3"/>
+      <columns xsi:type="roma:PhysicalColumn" id="_col4" name="ColumnNumeric" type="Numeric"/>
+      <columns xsi:type="roma:PhysicalColumn" id="_col5" name="ColumnFloat" type="Float"/>
+      <columns xsi:type="roma:PhysicalColumn" id="_col6" name="ColumnReal" type="Real"/>
+      <columns xsi:type="roma:PhysicalColumn" id="_col7" name="ColumnDouble" type="Double"/>
+      <columns xsi:type="roma:PhysicalColumn" id="_col8" name="ColumnIneger" type="Integer"/>
+    </tables>
+  </roma:DatabaseSchema>
+</xmi:XMI>
