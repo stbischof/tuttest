@@ -1,9 +1,9 @@
-#Introduction into Columns
+# Introduction into Columns
 
 The data of a table are seperated into columns. Each column that should be used, must explicitly defines. Columns that are not relevant for the analysis can be left out.
 
 
-##Common column fields
+## Common column fields
 
 A Column has the fields `id,` `name`, `description` and `nullable`. Id is used to reference the column. Name is the name of the Column in the Database-table. Description is a human-readable textual description of the column. Nullable is an boolean flag, that indicates if the column can contain null values.
 
@@ -13,11 +13,11 @@ A Column has the fields `id,` `name`, `description` and `nullable`. Id is used t
 
 ```
 
-##Types of Columns
+## Types of Columns
 
 In database tables, columns can have various data types to store data efficiently. These types come with additional attributes that provide more detailed descriptions and constraints.
 
-###Varchar
+### Varchar
 
 The ColumnSize field in represents the maximum width or precision of a column, depending on its data type. It provides essential information about how much data a column can store
 
@@ -27,7 +27,7 @@ The ColumnSize field in represents the maximum width or precision of a column, d
 
 ```
 
-###Decimal
+### Decimal
 
 DECIMAL type represents Fixed-point number with exact precision (p) and scale (s), used for precise calculations (e.g., financial data).
 
@@ -43,7 +43,7 @@ The NumPrecRadix field represents the numeric precision radix (or base) used for
 
 ```
 
-###Numeric
+### Numeric
 
 Numeric are the same as DECIMAL, but some databases treat it as stricter in enforcing precision.
 
@@ -52,7 +52,7 @@ Numeric are the same as DECIMAL, but some databases treat it as stricter in enfo
 
 ```
 
-###Float
+### Float
 
 Float Approximate floating-point number, implementation-dependent precision, can introduce rounding errors
 
@@ -61,7 +61,7 @@ Float Approximate floating-point number, implementation-dependent precision, can
 
 ```
 
-###Real
+### Real
 
 REAL are Single-precision (32-bit) floating-point number, less precise than DOUBLE.
 
@@ -70,7 +70,7 @@ REAL are Single-precision (32-bit) floating-point number, less precise than DOUB
 
 ```
 
-###Double
+### Double
 
 DOUBLE (or DOUBLE PRECISION) – Double-precision (64-bit) floating-point number, more accurate than REAL.
 
@@ -79,7 +79,7 @@ DOUBLE (or DOUBLE PRECISION) – Double-precision (64-bit) floating-point number
 
 ```
 
-###Integer
+### Integer
 
 INTEGER are the whole number type, typically 32-bit, used for exact, non-decimal values.
 

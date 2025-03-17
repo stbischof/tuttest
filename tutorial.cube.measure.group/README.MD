@@ -1,9 +1,9 @@
-#Measures Formats
+# Measures Formats
 
 In cases where you need a better overview of all measures, want to provide additional context for a `Measure`, or need to organize a list of measures, you can use a `MeasureGroup`.
 
 
-##Database Schema
+## Database Schema
 
 The cube defined in this example is based on a single table that stores all the data. The table, named `Fact`, contains two columns: `KEY` and `VALUE`. The `KEY` column acts as a discriminator, while the `VALUE` column holds the measurements to be aggregated.
 
@@ -18,7 +18,7 @@ The cube defined in this example is based on a single table that stores all the 
 
 ```
 
-##Query
+## Query
 
 This example uses a TableQuery, as it directly references the physical table `Fact`.
 
@@ -28,7 +28,7 @@ This example uses a TableQuery, as it directly references the physical table `Fa
 
 ```
 
-##Grouping Measures
+## Grouping Measures
 
 A `MeasureGroup` is a logical container designed to group related measures. Each `MeasureGroup` can have a  name. Names must be unique within the `Cube`. `Measure` only can be in `Cube`s if they are contained in `MeasureGroup`s. In this example we group all alphabetic measures in one group and all other measures in another group.
 

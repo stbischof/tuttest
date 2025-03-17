@@ -1,9 +1,9 @@
-#Tables and TableTypes
+# Tables and TableTypes
 
 There are several Tables Types. The most common are PhysicalTable, ViewTable, and SystemTable. All of this, and thre upcoming table typed can be used to build cubes on.
 
 
-##Physical Table
+## Physical Table
 
 Physical Tables are the most common Tables.  They are used to store data in the Database.
 
@@ -13,7 +13,7 @@ Physical Tables are the most common Tables.  They are used to store data in the 
 
 ```
 
-##View Table
+## View Table
 
 View Tables ate Database views. Virtual tables that are the result of a query inside the underlaying Database. They are used to simplify complex queries and to hide the complexity.
 
@@ -23,7 +23,7 @@ View Tables ate Database views. Virtual tables that are the result of a query in
 
 ```
 
-##System Table
+## System Table
 
 Sytsem Tables are are used and managed by the underlaying Database Management System. They are used to store metadata and other information about the Database itsselfe. Please be carefill when using System Tables, this may cause secutiry issues.
 

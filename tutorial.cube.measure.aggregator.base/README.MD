@@ -1,9 +1,9 @@
-#Multiple Measures and Aggragators
+# Multiple Measures and Aggragators
 
 Data cubes can also have multiple measures when different aggregations are required for a column.
 
 
-##Database Schema
+## Database Schema
 
 The cube defined in this example is based on a single table that stores all the data. The table, named `Fact`, contains two columns: `KEY` and `VALUE`. The `KEY` column acts as a discriminator, while the `VALUE` column holds the measurements to be aggregated.
 
@@ -18,7 +18,7 @@ The cube defined in this example is based on a single table that stores all the 
 
 ```
 
-##Query
+## Query
 
 This example uses a TableQuery, as it directly references the physical table `Fact`.
 
@@ -28,7 +28,7 @@ This example uses a TableQuery, as it directly references the physical table `Fa
 
 ```
 
-##Cube, MeasureGroup and Measure
+## Cube, MeasureGroup and Measure
 
 In this example, multiple measures are defined. All measures reference the `VALUE` column and use the following aggregation functions:
 - SUM – Calculates the sum of the values.

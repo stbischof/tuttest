@@ -1,9 +1,9 @@
-#Measures Formats
+# Measures Formats
 
 Measures are based on the Columns that store the date of the measurements. The datatype of the column in the database must not match the datatype that schould be used for calculating the Measures value.
 
 
-##Database Schema
+## Database Schema
 
 The cube defined in this example is based on a single table that stores all the data. The table, named `Fact`, contains two columns: `KEY` and `VALUE`. The `KEY` column acts as a discriminator, while the `VALUE` column holds the measurements to be aggregated.
 
@@ -18,7 +18,7 @@ The cube defined in this example is based on a single table that stores all the 
 
 ```
 
-##Query
+## Query
 
 This example uses a TableQuery, as it directly references the physical table `Fact`.
 
@@ -28,7 +28,7 @@ This example uses a TableQuery, as it directly references the physical table `Fa
 
 ```
 
-##Defining the Data Type of a Measure
+## Defining the Data Type of a Measure
 
 When changing the data type of a measure, the optional `datatype` attribute of the `Measure` element can be used.
 

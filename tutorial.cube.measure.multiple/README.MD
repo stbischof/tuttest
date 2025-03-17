@@ -1,9 +1,9 @@
-#Multiple Measures
+# Multiple Measures
 
 Data cubes can have multiple measures to provide different data related to the cube's topic. This is particularly useful when aggregating different data columns within the same cube.
 
 
-##Database Schema
+## Database Schema
 
 The cube defined in this example is based on a single table that stores all the data. The table, named Fact, contains four columns: KEY, VALUE1, VALUE2, and VALUE3. The KEY column acts as a discriminator, while the VALUE1, VALUE2, and VALUE3 columns contain the measurements to be aggregated.
 
@@ -20,7 +20,7 @@ The cube defined in this example is based on a single table that stores all the 
 
 ```
 
-##Query
+## Query
 
 This example uses a TableQuery, as it directly references the physical table Fact.
 
@@ -30,7 +30,7 @@ This example uses a TableQuery, as it directly references the physical table Fac
 
 ```
 
-##Measures
+## Measures
 
 In this example, multiple measures are defined:
 - The first measure references the `VALUE1` column.
@@ -50,7 +50,7 @@ All measures use sum aggregation.
 
 ```
 
-##DefaultMeasure
+## DefaultMeasure
 
 Specifying `defaultMeasure` in the `Cube` element allows users to explicitly set a base measure as the default. If `defaultMeasure` is not specified, the first measure in the list is automatically considered the default measure.
 

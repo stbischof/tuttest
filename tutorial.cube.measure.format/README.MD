@@ -1,9 +1,9 @@
-#Measures Formats
+# Measures Formats
 
 Depending on the measure, it may be necessary to format its values appropriately.
 
 
-##Database Schema
+## Database Schema
 
 The cube defined in this example is based on a single table that stores all the data. The table, named `Fact`, contains two columns: `KEY` and `VALUE`. The `KEY` column acts as a discriminator, while the `VALUE` column holds the measurements to be aggregated.
 
@@ -18,7 +18,7 @@ The cube defined in this example is based on a single table that stores all the 
 
 ```
 
-##Query
+## Query
 
 This example uses a TableQuery, as it directly references the physical table `Fact`.
 
@@ -28,7 +28,7 @@ This example uses a TableQuery, as it directly references the physical table `Fa
 
 ```
 
-##Formats on Measures
+## Formats on Measures
 
 In this example, multiple measures are defined. All measures reference the `VALUE` column and use the following Formats functions:
 - `#,##0.00` – value with two decimal places and includes a comma as the thousands separator.
@@ -47,7 +47,7 @@ In this example, multiple measures are defined. All measures reference the `VALU
 
 ```
 
-##Further Formats
+## Further Formats
 
 General Number Formats
 - `#,##0` – Displays numbers with thousand separators (e.g., `1,234`).

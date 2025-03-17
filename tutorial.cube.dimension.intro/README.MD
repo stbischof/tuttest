@@ -1,11 +1,11 @@
-#Dimension - Introduction
+# Dimension - Introduction
 
 beside the Measures a cube can contain dimensions. Dimensions are used to slice, dice and piveaut the data in the cube. They can be used group the data, filter the data,or to provide additional context for the data. Dimensions consist of one or multiple Hierarchies. Hierarchies consist of one or multiple Levels. Each level can have one or multiple Properties. Properties are used to provide additional context for the data. They can be used to display additional information about the data in the cube, such as descriptions, labels, or other attributes.
 
 In this example we will create the most simple version, a cube with one dimension. The dimension will have one hierarchy, which will have one level.
 
 
-##Database Schema
+## Database Schema
 
 The cube defined in this example is based on a single table that stores all the data. The table, named `Fact`, contains two columns: `KEY` and `VALUE`. The `KEY` column acts as a discriminator, while the `VALUE` column holds the measurements to be aggregated.
 
@@ -20,7 +20,7 @@ The cube defined in this example is based on a single table that stores all the 
 
 ```
 
-##Query
+## Query
 
 This example uses a TableQuery, as it directly references the physical table `Fact`.
 
@@ -30,7 +30,7 @@ This example uses a TableQuery, as it directly references the physical table `Fa
 
 ```
 
-##Level
+## Level
 
 The level is the most basic element of a hierarchy. It defines the granularity of the data in the hierarchy. To create a Level we need do set the key column, which is the column that uniquely identifies the Level in the table. In this example we use the `KEY` column of the `Fact` table as the key column of the level.
 
@@ -40,7 +40,7 @@ The level is the most basic element of a hierarchy. It defines the granularity o
 
 ```
 
-##Hierarchy
+## Hierarchy
 
 A hierarchy is a collection of levels that defines the structure of data within a dimension. It provides a name for the group the contained Level elements.
 
@@ -54,7 +54,7 @@ Additionally, a primary key column can be specified for the hierarchy. The prima
 
 ```
 
-##Dimension
+## Dimension
 
 The Dimenaion is the main element of the cube. It defines the structure of the data in the cube. The dimension can contain one or multiple hierarchies. In this example we use one hierarchy, which contains one level.
 
@@ -64,7 +64,7 @@ The Dimenaion is the main element of the cube. It defines the structure of the d
 
 ```
 
-##Cube and DimensionConnector and Measure
+## Cube and DimensionConnector and Measure
 
 The cube contains only one Measure in a unnamed MeasureGroup and references to the Dimension.
 

@@ -1,10 +1,10 @@
-#Introduction into DataBase
+# Introduction into DataBase
 
 The foundation of all data analysis is the data to be analyzed.
 In this case, it is stored in a relational database.
 
 
-##Catalog
+## Catalog
 
 The catalog is the primary object in a Daanse server. It serves as a logical grouping to separate different topics in the context of data storage and analysis. The catalog references a single databaseSchema.
 
@@ -14,7 +14,7 @@ The catalog is the primary object in a Daanse server. It serves as a logical gro
 
 ```
 
-##Schema
+## Schema
 
 A catalog can be structured into databaseSchemas to logically group tables. The same table name can exist in multiple schemas.
 
@@ -26,7 +26,7 @@ In Daanse, we represent the database schema, where the data is stored, as a Data
 
 ```
 
-##Table
+## Table
 
 A schema contains the tables within a database. There are multiple types of tables, which we will explain in further tutorials.
 
@@ -38,7 +38,7 @@ The most common type we use is the physical table. The tables defined in a schem
 
 ```
 
-##Column
+## Column
 
 A table consists of columns, each with a name and a data type.
 

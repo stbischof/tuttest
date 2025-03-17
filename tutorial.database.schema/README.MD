@@ -1,11 +1,11 @@
-#Introduction into DataBase Schemas
+# Introduction into DataBase Schemas
 
 The purpose of database schemas is to organize tables into logical groups.
 
 In the Daanse server, schemas can be referenced in the catalog. None or only a subset of the existing database schemas may be referenced. This reference is only required if the Daanse server needs to expose the schemas and their tables via an API, such as XMLA.
 
 
-##Schema without name
+## Schema without name
 
 The name of a database schema is optional and can be left empty. In such cases, the server will query the default schema of the underlying database.
 
@@ -15,7 +15,7 @@ The name of a database schema is optional and can be left empty. In such cases, 
 
 ```
 
-##Schema and attrebutes
+## Schema and attrebutes
 
 It is more secure to explicitly define the schema using the `name` attribute. To provide a clearer description of the schema's contents, you can use the `description` attribute.
 
