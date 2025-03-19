@@ -10,7 +10,7 @@
       <columns xsi:type="roma:PhysicalColumn" id="_col5" name="ColumnFloat" type="Float"/>
       <columns xsi:type="roma:PhysicalColumn" id="_col6" name="ColumnReal" type="Real"/>
       <columns xsi:type="roma:PhysicalColumn" id="_col7" name="ColumnDouble" type="Double"/>
-      <columns xsi:type="roma:PhysicalColumn" id="_col8" name="ColumnIneger" type="Integer"/>
+      <columns xsi:type="roma:PhysicalColumn" id="_col8" name="ColumnInteger" type="Integer"/>
     </tables>
   </roma:DatabaseSchema>
 </xmi:XMI>

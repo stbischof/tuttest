@@ -56,7 +56,7 @@ Additionally, a primary key column can be specified for the hierarchy. The prima
 
 ## Dimension
 
-The Dimenaion is the main element of the cube. It defines the structure of the data in the cube. The dimension can contain one or multiple hierarchies. In this example we use one hierarchy, which contains one level.
+The Dimension is the main element of the cube. It defines the structure of the data in the cube. The dimension can contain one or multiple hierarchies. In this example we use one hierarchy, which contains one level.
 
 
 ```xmi
@@ -73,7 +73,7 @@ To connect the dimension to the cube, a DimensionConnector is used. The Dimensio
 
 ```xmi
 <roma:PhysicalCube  id="_cube" name="CubeWithSimpleDimension" query="#_query">
-  <dimensionConnectors dimension="roma:StandardDimension #_dimension"/>
+  <dimensionConnectors dimension="#_dimension"/>
   <measureGroups>
     <measures id="_measure" name="theMeasure" column="#_col_value" aggregator="sum"/>
   </measureGroups>

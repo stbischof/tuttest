@@ -1,13 +1,13 @@
 # Documentation
-### CatalogName : Dimension - Introduction
-### Schema Dimension - Introduction : 
+### CatalogName : Hierarchy - Query based on seperate Tables for Fact and Dimension
+### Schema Hierarchy - Query based on seperate Tables for Fact and Dimension : 
 ---
 ### Cubes :
 
-    CubeWithSimpleDimension
+    Cube Query linked Tables
 
 ---
-#### Cube "CubeWithSimpleDimension":
+#### Cube "Cube Query linked Tables":
 
     
 
@@ -18,19 +18,19 @@
 
 Hierarchies:
 
-    theHierarchy
+    TownHierarchy
 
-##### Hierarchy theHierarchy:
+##### Hierarchy TownHierarchy:
 
-Tables: "Fact"
+Tables: "Town"
 
-Levels: "theLevel"
+Levels: "Town"
 
-###### Level "theLevel" :
+###### Level "Town" :
 
-    column(s): KEY
+    column(s): ID
 
-### Cube "CubeWithSimpleDimension" diagram:
+### Cube "Cube Query linked Tables" diagram:
 
 ---
 
@@ -47,18 +47,18 @@ Levels: "theLevel"
 ]
 }}%%
 erDiagram
-c0["CubeWithSimpleDimension"]{
+c0["Cube Query linked Tables"]{
 M theMeasure ""
 D _ ""
 }
-d00["theDimension"] {
-H theHierarchy ""
+d00["Town"] {
+H TownHierarchy ""
 }
-h000["theHierarchy"] {
-L theLevel ""
+h000["TownHierarchy"] {
+L Town ""
 }
-"c0" ||--|| "d00" : "KEY"
-"d00" ||--|| "h000" : "KEY-KEY"
+"c0" ||--|| "d00" : "TOWN_ID-ID"
+"d00" ||--|| "h000" : "ID-ID"
 ```
 ---
 ### Database :
@@ -69,10 +69,15 @@ title: Diagram;
 ---
 erDiagram
 "Fact✔"{
-string KEY "is null (1000000000.0) ✔"
+int TOWN_ID "is null (32.0) ✔"
 int VALUE "is null (32.0) ✔"
 }
+"Town✔"{
+int ID "is null (32.0) ✔"
+string NAME "is null (1000000000.0) ✔"
+}
 
+"Fact✔" ||--o{ "Town✔" : "TOWN_ID-ID"
 ```
 ---
 " Aggregation section:
@@ -81,12 +86,12 @@ int VALUE "is null (32.0) ✔"
 ```mermaid
    erDiagram
 "Fact✔"{
-string KEY "is null (1000000000.0) ✔"
+int TOWN_ID "is null (32.0) ✔"
 int VALUE "is null (32.0) ✔"
 }
 ```
 ---
-### Cube Matrix for Dimension - Introduction:
+### Cube Matrix for Hierarchy - Query based on seperate Tables for Fact and Dimension:
 ```mermaid
 quadrantChart
 title Cube Matrix
@@ -97,7 +102,7 @@ quadrant-2 Deep
 quadrant-3 Simple
 quadrant-4 Wide
 
-Cube CubeWithSimpleDimension: [0.0500, 0.0001]
+Cube Cube_Query_linked_Tables: [0.0500, 0.0001]
 ```
 ---
 ### Database :
@@ -108,9 +113,14 @@ title: Diagram;
 ---
 erDiagram
 "Fact✔"{
-string KEY "is null (1000000000.0) ✔"
+int TOWN_ID "is null (32.0) ✔"
 int VALUE "is null (32.0) ✔"
 }
+"Town✔"{
+int ID "is null (32.0) ✔"
+string NAME "is null (1000000000.0) ✔"
+}
 
+"Fact✔" ||--o{ "Town✔" : "TOWN_ID-ID"
 ```
 ---
