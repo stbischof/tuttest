@@ -47,3 +47,5 @@ More information and visualisations about this Catalog you can find in the [Docu
 
 This files represent the data in the tables.
 
+- [table](./data/table.csv)
+

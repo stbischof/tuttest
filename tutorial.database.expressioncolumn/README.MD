@@ -27,7 +27,15 @@ This files represent the complete definition of the catalog.
   <roma:DatabaseSchema id="_dbschema">
     <tables xsi:type="roma:PhysicalTable" id="_tab" name="TableWithExpressionColumn">
       <columns xsi:type="roma:PhysicalColumn" id="_col1" name="column1"/>
-      <columns xsi:type="roma:SQLExpressionColumn" id="_col2" name="SqlExpressionColumn"/>
+      <columns xsi:type="roma:SQLExpressionColumn" id="_col2" name="SqlExpressionColumn">
+        <sqls sql="column1 + column1">
+          <dialects>generic</dialects>
+          <dialects>mysql</dialects>
+        </sqls>
+        <sqls sql="column1 + column1 + column1">
+          <dialects>h2</dialects>
+        </sqls>
+      </columns>
     </tables>
   </roma:DatabaseSchema>
 </xmi:XMI>
@@ -41,4 +49,6 @@ More information and visualisations about this Catalog you can find in the [Docu
 
 
 This files represent the data in the tables.
+
+- [TableWithExpressionColumn](./data/TableWithExpressionColumn.csv)
 

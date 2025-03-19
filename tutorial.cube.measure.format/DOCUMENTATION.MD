@@ -31,9 +31,9 @@
 }}%%
 erDiagram
 c0["MeasuresFormatCube"]{
-M Format_#,##0_00 ""
-M Format_#,##0 ""
-M Format_#,##0_ ""
+M Format_x_xx0_00 ""
+M Format_x_xx0 ""
+M Format_x_xx0_ ""
 }
 ```
 ---

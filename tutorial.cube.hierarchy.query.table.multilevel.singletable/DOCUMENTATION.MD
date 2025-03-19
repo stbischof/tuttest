@@ -1,13 +1,13 @@
 # Documentation
-### CatalogName : Dimension - Introduction
-### Schema Dimension - Introduction : 
+### CatalogName : Hierarchy - Query based on all in one Table
+### Schema Hierarchy - Query based on all in one Table : 
 ---
 ### Cubes :
 
-    CubeWithSimpleDimension
+    Cube Query linked Tables
 
 ---
-#### Cube "CubeWithSimpleDimension":
+#### Cube "Cube Query linked Tables":
 
     
 
@@ -18,19 +18,23 @@
 
 Hierarchies:
 
-    theHierarchy
+    TownHierarchy
 
-##### Hierarchy theHierarchy:
+##### Hierarchy TownHierarchy:
 
 Tables: "Fact"
 
-Levels: "theLevel"
+Levels: "Town, Country"
 
-###### Level "theLevel" :
+###### Level "Town" :
 
     column(s): KEY
 
-### Cube "CubeWithSimpleDimension" diagram:
+###### Level "Country" :
+
+    column(s): KEY
+
+### Cube "Cube Query linked Tables" diagram:
 
 ---
 
@@ -47,17 +51,19 @@ Levels: "theLevel"
 ]
 }}%%
 erDiagram
-c0["CubeWithSimpleDimension"]{
+c0["Cube Query linked Tables"]{
 M theMeasure ""
 D _ ""
 }
-d00["theDimension"] {
-H theHierarchy ""
+d00["Town"] {
+H TownHierarchy ""
 }
-h000["theHierarchy"] {
-L theLevel ""
+h000["TownHierarchy"] {
+L Town ""
+L Country ""
 }
-"c0" ||--|| "d00" : "KEY"
+"c0" ||--|| "d00" : "KEY-KEY"
+"d00" ||--|| "h000" : "KEY-KEY"
 "d00" ||--|| "h000" : "KEY-KEY"
 ```
 ---
@@ -71,6 +77,7 @@ erDiagram
 "Fact✔"{
 string KEY "is null (1000000000.0) ✔"
 int VALUE "is null (32.0) ✔"
+string COUNTRY "is null (1000000000.0) ✔"
 }
 
 ```
@@ -83,10 +90,11 @@ int VALUE "is null (32.0) ✔"
 "Fact✔"{
 string KEY "is null (1000000000.0) ✔"
 int VALUE "is null (32.0) ✔"
+string COUNTRY "is null (1000000000.0) ✔"
 }
 ```
 ---
-### Cube Matrix for Dimension - Introduction:
+### Cube Matrix for Hierarchy - Query based on all in one Table:
 ```mermaid
 quadrantChart
 title Cube Matrix
@@ -97,7 +105,7 @@ quadrant-2 Deep
 quadrant-3 Simple
 quadrant-4 Wide
 
-Cube CubeWithSimpleDimension: [0.0500, 0.0001]
+Cube Cube_Query_linked_Tables: [0.1000, 0.0001]
 ```
 ---
 ### Database :
@@ -110,6 +118,7 @@ erDiagram
 "Fact✔"{
 string KEY "is null (1000000000.0) ✔"
 int VALUE "is null (32.0) ✔"
+string COUNTRY "is null (1000000000.0) ✔"
 }
 
 ```

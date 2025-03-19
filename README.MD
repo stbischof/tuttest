@@ -1,7 +1,5 @@
 # Tutorials 
 
-- [Schulwesen](./complex.school/README.MD)
-
 - [Database - Intro](./tutorial.database.intro/README.MD)
 
 - [Database - ColumnTypes](./tutorial.database.column/README.MD)
@@ -30,4 +28,12 @@
 
 - [Dimension - Introduction](./tutorial.cube.dimension.intro/README.MD)
 
-- [Hierarchy - Querys with linked Physical tables](./tutorial.cube.hierarchy.query.physicaltable/README.MD)
+- [Hierarchy - Query based on seperate Tables for Fact and Dimension](./tutorial.cube.hierarchy.query.table.base/README.MD)
+
+- [Hierarchy - Query based on a Table with 2 Levels](./tutorial.cube.hierarchy.query.table.multilevel.multitable/README.MD)
+
+- [Hierarchy - Query based on all in one Table](./tutorial.cube.hierarchy.query.table.multilevel.singletable/README.MD)
+
+- [Hierarchy - Query based on Join](./tutorial.cube.hierarchy.query.join.base/README.MD)
+
+- [Hierarchy - Query based on a 2 Joind with 3 Levels](./tutorial.cube.hierarchy.query.join.multi/README.MD)

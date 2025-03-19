@@ -19,3 +19,17 @@ quadrant-4 Wide
 
 ```
 ---
+### Database :
+---
+```mermaid
+---
+title: Diagram;
+---
+erDiagram
+"TableWithExpressionColumn❌"{
+string column1 "is null (1000000000.0) ✔"
+Varchar SqlExpressionColumn "is null ❌"
+}
+
+```
+---
