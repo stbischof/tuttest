@@ -71,9 +71,11 @@ The level  of the Country used the `column` attribute to define the primary key 
 
 This Hierarchy contains both defined levels. The `primaryKey` attribute defines the column that contains the primary key of the hierarchy. The `query` attribute references to the query that will be used to retrieve the data for the hierarchy.
 
+The order of the Levels in the hierarchy is important, as it determines the drill-down path for the hierarchy.
+
 
 ```xmi
-<roma:Hierarchy  id="_hierarchy_town" name="TownHierarchy" levels="#_level_town #_level_country" primaryKey="#_col_town_id" query="#_Query_LevelTown"/>
+<roma:Hierarchy  id="_hierarchy_town" name="TownHierarchy" levels="#_level_country #_level_town" primaryKey="#_col_town_id" query="#_Query_LevelTown"/>
 
 ```
 
@@ -124,11 +126,11 @@ This files represent the complete definition of the catalog.
       <columns xsi:type="roma:PhysicalColumn" id="_col_country" name="COUNTRY"/>
     </tables>
   </roma:DatabaseSchema>
-  <roma:TableQuery id="_query_Fact" table="_tab_fact"/>
   <roma:TableQuery id="_Query_LevelTown" table="_tab_town"/>
+  <roma:TableQuery id="_query_Fact" table="_tab_fact"/>
   <roma:Level id="_level_country" name="Country" column="_col_country"/>
   <roma:Level id="_level_town" name="Town" column="_col_town_id" nameColumn="_col_town_name"/>
-  <roma:Hierarchy id="_hierarchy_town" name="TownHierarchy" levels="_level_town _level_country" primaryKey="_col_town_id" query="_Query_LevelTown"/>
+  <roma:Hierarchy id="_hierarchy_town" name="TownHierarchy" levels="_level_country _level_town" primaryKey="_col_town_id" query="_Query_LevelTown"/>
   <roma:StandardDimension id="_dim_town" name="Town" hierarchies="_hierarchy_town"/>
   <roma:PhysicalCube id="_cube" name="Cube Query linked Tables" query="_query_Fact">
     <dimensionConnectors foreignKey="_col_fact_townId" dimension="_dim_town"/>

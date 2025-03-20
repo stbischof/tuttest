@@ -1,19 +1,36 @@
 # Documentation
-### CatalogName : Cube - Measures and MeasureGroups
-### Schema Cube - Measures and MeasureGroups : 
+### CatalogName : Cube - CalculatedMembers Intro
+### Schema Cube - CalculatedMembers Intro : 
 ---
 ### Cubes :
 
-    MeasureGroupCube
+    Cube CalculatedMember
 
 ---
-#### Cube "MeasureGroupCube":
+#### Cube "Cube CalculatedMember":
 
     
 
 ##### Table: "Fact"
 
-### Cube "MeasureGroupCube" diagram:
+##### Dimensions:
+##### Dimension "":
+
+Hierarchies:
+
+    theHierarchy
+
+##### Hierarchy theHierarchy:
+
+Tables: "Fact"
+
+Levels: "theLevel"
+
+###### Level "theLevel" :
+
+    column(s): KEY
+
+### Cube "Cube CalculatedMember" diagram:
 
 ---
 
@@ -30,11 +47,21 @@
 ]
 }}%%
 erDiagram
-c0["MeasureGroupCube"]{
-M Measure_A ""
-M Measure_B ""
-M Measure_1 ""
+c0["Cube CalculatedMember"]{
+M Measure1-Sum ""
+M Measure2-Count ""
+D _ ""
+CM Calculated_Member_1 ""
+CM Calculated_Member_2 ""
 }
+d00["theDimension"] {
+H theHierarchy ""
+}
+h000["theHierarchy"] {
+L theLevel ""
+}
+"c0" ||--|| "d00" : "KEY-KEY"
+"d00" ||--|| "h000" : "KEY-KEY"
 ```
 ---
 ### Database :
@@ -47,6 +74,7 @@ erDiagram
 "Fact✔"{
 string KEY "is null (1000000000.0) ✔"
 int VALUE "is null (32.0) ✔"
+double VALUE_NUMERIC "is null (100000.0) ✔"
 }
 
 ```
@@ -59,10 +87,11 @@ int VALUE "is null (32.0) ✔"
 "Fact✔"{
 string KEY "is null (1000000000.0) ✔"
 int VALUE "is null (32.0) ✔"
+double VALUE_NUMERIC "is null (100000.0) ✔"
 }
 ```
 ---
-### Cube Matrix for Cube - Measures and MeasureGroups:
+### Cube Matrix for Cube - CalculatedMembers Intro:
 ```mermaid
 quadrantChart
 title Cube Matrix
@@ -73,7 +102,7 @@ quadrant-2 Deep
 quadrant-3 Simple
 quadrant-4 Wide
 
-Cube MeasureGroupCube: [0.0000, 0.0001]
+Cube Cube_CalculatedMember: [0.0500, 0.0001]
 ```
 ---
 ### Database :
@@ -86,6 +115,7 @@ erDiagram
 "Fact✔"{
 string KEY "is null (1000000000.0) ✔"
 int VALUE "is null (32.0) ✔"
+double VALUE_NUMERIC "is null (100000.0) ✔"
 }
 
 ```

@@ -52,9 +52,11 @@ The level  of the Country used the `column` attribute to define the column that 
 
 This Hierarchy contains both defined levels. The `primaryKey` attribute defines the column that contains the primary key of the hierarchy. The `query` attribute references to the query that will be used to retrieve the data for the hierarchy.
 
+The order of the Levels in the hierarchy is important, as it determines the drill-down path for the hierarchy.
+
 
 ```xmi
-<roma:Hierarchy  id="_hierarchy_town" name="TownHierarchy" levels="#_level_town #_level_country" primaryKey="#_col_fact_key" query="#_query"/>
+<roma:Hierarchy  id="_hierarchy_town" name="TownHierarchy" levels="#_level_country #_level_town" primaryKey="#_col_fact_key" query="#_query"/>
 
 ```
 
@@ -104,7 +106,7 @@ This files represent the complete definition of the catalog.
   <roma:TableQuery id="_query" table="_tab_fact"/>
   <roma:Level id="_level_country" name="Country" column="_col_fact_country"/>
   <roma:Level id="_level_town" name="Town" column="_col_fact_key"/>
-  <roma:Hierarchy id="_hierarchy_town" name="TownHierarchy" levels="_level_town _level_country" primaryKey="_col_fact_key" query="_query"/>
+  <roma:Hierarchy id="_hierarchy_town" name="TownHierarchy" levels="_level_country _level_town" primaryKey="_col_fact_key" query="_query"/>
   <roma:StandardDimension id="_dim_town" name="Town" hierarchies="_hierarchy_town"/>
   <roma:PhysicalCube id="_cube" name="Cube Query linked Tables" query="_query">
     <dimensionConnectors foreignKey="_col_fact_country" dimension="_dim_town"/>
