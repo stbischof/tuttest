@@ -1,6 +1,6 @@
 # Documentation
-### CatalogName : Hierarchy - Query based on a Table with 2 Levels
-### Schema Hierarchy - Query based on a Table with 2 Levels : 
+### CatalogName : Level - MemberProperties Intro
+### Schema Level - MemberProperties Intro : 
 ---
 ### Cubes :
 
@@ -24,11 +24,7 @@ Hierarchies:
 
 Tables: "Town"
 
-Levels: "Country, Town"
-
-###### Level "Country" :
-
-    column(s): COUNTRY
+Levels: "Town"
 
 ###### Level "Town" :
 
@@ -59,11 +55,9 @@ d00["Town"] {
 H TownHierarchy ""
 }
 h000["TownHierarchy"] {
-L Country ""
 L Town ""
 }
 "c0" ||--|| "d00" : "TOWN_ID-ID"
-"d00" ||--|| "h000" : "ID-COUNTRY"
 "d00" ||--|| "h000" : "ID-ID"
 ```
 ---
@@ -81,7 +75,7 @@ int VALUE "is null (32.0) ✔"
 "Town✔"{
 int ID "is null (32.0) ✔"
 string NAME "is null (1000000000.0) ✔"
-string COUNTRY "is null (1000000000.0) ✔"
+string CAPITAL "is null (1000000000.0) ✔"
 }
 
 "Fact✔" ||--o{ "Town✔" : "TOWN_ID-ID"
@@ -98,7 +92,7 @@ int VALUE "is null (32.0) ✔"
 }
 ```
 ---
-### Cube Matrix for Hierarchy - Query based on a Table with 2 Levels:
+### Cube Matrix for Level - MemberProperties Intro:
 ```mermaid
 quadrantChart
 title Cube Matrix
@@ -109,7 +103,7 @@ quadrant-2 Deep
 quadrant-3 Simple
 quadrant-4 Wide
 
-Cube Cube_Query_linked_Tables: [0.1000, 0.0001]
+Cube Cube_Query_linked_Tables: [0.0500, 0.0001]
 ```
 ---
 ### Database :
@@ -126,7 +120,7 @@ int VALUE "is null (32.0) ✔"
 "Town✔"{
 int ID "is null (32.0) ✔"
 string NAME "is null (1000000000.0) ✔"
-string COUNTRY "is null (1000000000.0) ✔"
+string CAPITAL "is null (1000000000.0) ✔"
 }
 
 "Fact✔" ||--o{ "Town✔" : "TOWN_ID-ID"

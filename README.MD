@@ -24,7 +24,7 @@
 
 - [Cube - Measures and Formats](./tutorial.cube.measure.format/README.MD)
 
-- [Cube - Measures and Formats](./tutorial.cube.measure.group/README.MD)
+- [Cube - Measures and MeasureGroups](./tutorial.cube.measure.group/README.MD)
 
 - [Dimension - Introduction](./tutorial.cube.dimension.intro/README.MD)
 
@@ -37,3 +37,9 @@
 - [Hierarchy - Query based on Join](./tutorial.cube.hierarchy.query.join.base/README.MD)
 
 - [Hierarchy - Query based on a 2 Joind with 3 Levels](./tutorial.cube.hierarchy.query.join.multi/README.MD)
+
+- [Hierarchy - HasAll-Level](./tutorial.cube.hierarchy.hasall/README.MD)
+
+- [Level - MemberProperties Intro](./tutorial.cube.level.member.property.intro/README.MD)
+
+- [Cube - CalculatedMembers Intro](./tutorial.cube.calculatedmember.intro/README.MD)

@@ -1,13 +1,13 @@
 # Documentation
-### CatalogName : Hierarchy - Query based on all in one Table
-### Schema Hierarchy - Query based on all in one Table : 
+### CatalogName : Hierarchy - HasAll-Level
+### Schema Hierarchy - HasAll-Level : 
 ---
 ### Cubes :
 
-    Cube Query linked Tables
+    HasAll Cube
 
 ---
-#### Cube "Cube Query linked Tables":
+#### Cube "HasAll Cube":
 
     
 
@@ -18,23 +18,39 @@
 
 Hierarchies:
 
-    TownHierarchy
+    Hierarchy - with HasAll, Hierarchy - with HasAll and Names, Hierarchy - Without HasAll
 
-##### Hierarchy TownHierarchy:
+##### Hierarchy Hierarchy - with HasAll:
 
 Tables: "Fact"
 
-Levels: "Country, Town"
+Levels: "theLevel"
 
-###### Level "Country" :
-
-    column(s): KEY
-
-###### Level "Town" :
+###### Level "theLevel" :
 
     column(s): KEY
 
-### Cube "Cube Query linked Tables" diagram:
+##### Hierarchy Hierarchy - with HasAll and Names:
+
+Tables: "Fact"
+
+Levels: "theLevel"
+
+###### Level "theLevel" :
+
+    column(s): KEY
+
+##### Hierarchy Hierarchy - Without HasAll:
+
+Tables: "Fact"
+
+Levels: "theLevel"
+
+###### Level "theLevel" :
+
+    column(s): KEY
+
+### Cube "HasAll Cube" diagram:
 
 ---
 
@@ -51,20 +67,30 @@ Levels: "Country, Town"
 ]
 }}%%
 erDiagram
-c0["Cube Query linked Tables"]{
+c0["HasAll Cube"]{
 M theMeasure ""
 D _ ""
 }
-d00["Town"] {
-H TownHierarchy ""
+d00["Dimension1"] {
+H Hierarchy_-_with_HasAll ""
+H Hierarchy_-_with_HasAll_and_Names ""
+H Hierarchy_-_Without_HasAll ""
 }
-h000["TownHierarchy"] {
-L Country ""
-L Town ""
+h000["Hierarchy_-_with_HasAll"] {
+L theLevel ""
 }
-"c0" ||--|| "d00" : "KEY-KEY"
+h001["Hierarchy_-_with_HasAll_and_Names"] {
+L theLevel ""
+}
+h002["Hierarchy_-_Without_HasAll"] {
+L theLevel ""
+}
+"c0" ||--|| "d00" : "KEY"
 "d00" ||--|| "h000" : "KEY-KEY"
-"d00" ||--|| "h000" : "KEY-KEY"
+"c0" ||--|| "d00" : "KEY"
+"d00" ||--|| "h001" : "KEY-KEY"
+"c0" ||--|| "d00" : "KEY"
+"d00" ||--|| "h002" : "KEY-KEY"
 ```
 ---
 ### Database :
@@ -77,7 +103,6 @@ erDiagram
 "Fact✔"{
 string KEY "is null (1000000000.0) ✔"
 int VALUE "is null (32.0) ✔"
-string COUNTRY "is null (1000000000.0) ✔"
 }
 
 ```
@@ -90,11 +115,10 @@ string COUNTRY "is null (1000000000.0) ✔"
 "Fact✔"{
 string KEY "is null (1000000000.0) ✔"
 int VALUE "is null (32.0) ✔"
-string COUNTRY "is null (1000000000.0) ✔"
 }
 ```
 ---
-### Cube Matrix for Hierarchy - Query based on all in one Table:
+### Cube Matrix for Hierarchy - HasAll-Level:
 ```mermaid
 quadrantChart
 title Cube Matrix
@@ -105,7 +129,7 @@ quadrant-2 Deep
 quadrant-3 Simple
 quadrant-4 Wide
 
-Cube Cube_Query_linked_Tables: [0.1000, 0.0001]
+Cube HasAll_Cube: [0.1500, 0.0001]
 ```
 ---
 ### Database :
@@ -118,7 +142,6 @@ erDiagram
 "Fact✔"{
 string KEY "is null (1000000000.0) ✔"
 int VALUE "is null (32.0) ✔"
-string COUNTRY "is null (1000000000.0) ✔"
 }
 
 ```

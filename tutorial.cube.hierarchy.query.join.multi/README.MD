@@ -153,6 +153,8 @@ This hierarchy consists of three levels: Town, Country and  Continent.
 - The primaryKey attribute specifies the column that contains the primary key of the hierarchy.
 - The query attribute references the Join-query used to retrieve the data for the hierarchy.
 
+The order of the Levels in the hierarchy is important, as it determines the drill-down path for the hierarchy.
+
 
 ```xmi
 <roma:Hierarchy  id="_hierarchy_town" name="TownHierarchy" levels="#_level_continent #_level_country #_level_town" primaryKey="#_col_town_id" query="#_query_TownToCountry"/>
@@ -216,9 +218,9 @@ This files represent the complete definition of the catalog.
     </tables>
   </roma:DatabaseSchema>
   <roma:TableQuery id="_query_country" table="_tab_country"/>
+  <roma:TableQuery id="_query_town" table="_tab_town"/>
   <roma:TableQuery id="_query_fact" table="_tab_fact"/>
   <roma:TableQuery id="_query_continent" table="_tab_continent"/>
-  <roma:TableQuery id="_query_town" table="_tab_town"/>
   <roma:JoinQuery id="_query_CountryToContinent">
     <left key="_col_country_continentid" query="_query_country"/>
     <right key="_col_continent_id" query="_query_continent"/>
@@ -228,8 +230,8 @@ This files represent the complete definition of the catalog.
     <right key="_col_country_id" query="_query_CountryToContinent"/>
   </roma:JoinQuery>
   <roma:Level id="_level_town" name="Town" column="_col_town_id" nameColumn="_col_town_name"/>
-  <roma:Level id="_level_continent" name="Continent" column="_col_continent_id" nameColumn="_col_continent_name"/>
   <roma:Level id="_level_country" name="County" column="_col_country_id" nameColumn="_col_country_name"/>
+  <roma:Level id="_level_continent" name="Continent" column="_col_continent_id" nameColumn="_col_continent_name"/>
   <roma:Hierarchy id="_hierarchy_town" name="TownHierarchy" levels="_level_continent _level_country _level_town" primaryKey="_col_town_id" query="_query_TownToCountry"/>
   <roma:StandardDimension id="_dim" name="Continent - Country - Town" hierarchies="_hierarchy_town"/>
   <roma:PhysicalCube id="_cube" name="Cube Query linked Tables" query="_query_fact">
