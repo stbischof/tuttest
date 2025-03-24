@@ -126,10 +126,10 @@ This files represent the complete definition of the catalog.
       <columns xsi:type="roma:PhysicalColumn" id="_col_country" name="COUNTRY"/>
     </tables>
   </roma:DatabaseSchema>
-  <roma:TableQuery id="_Query_LevelTown" table="_tab_town"/>
   <roma:TableQuery id="_query_Fact" table="_tab_fact"/>
-  <roma:Level id="_level_country" name="Country" column="_col_country"/>
+  <roma:TableQuery id="_Query_LevelTown" table="_tab_town"/>
   <roma:Level id="_level_town" name="Town" column="_col_town_id" nameColumn="_col_town_name"/>
+  <roma:Level id="_level_country" name="Country" column="_col_country"/>
   <roma:Hierarchy id="_hierarchy_town" name="TownHierarchy" levels="_level_country _level_town" primaryKey="_col_town_id" query="_Query_LevelTown"/>
   <roma:StandardDimension id="_dim_town" name="Town" hierarchies="_hierarchy_town"/>
   <roma:PhysicalCube id="_cube" name="Cube Query linked Tables" query="_query_Fact">
