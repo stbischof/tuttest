@@ -43,3 +43,5 @@
 - [Level - MemberProperties Intro](./tutorial.cube.level.member.property.intro/README.MD)
 
 - [Cube - CalculatedMembers Intro](./tutorial.cube.calculatedmember.intro/README.MD)
+
+- [Cube - KPI Introduction](./tutorial.cube.kpi.intro/README.MD)

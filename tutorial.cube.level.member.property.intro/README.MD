@@ -120,8 +120,8 @@ This files represent the complete definition of the catalog.
     </tables>
   </roma:DatabaseSchema>
   <roma:PhysicalColumn id="_col_town_capital" name="CAPITAL" columnSize="100"/>
-  <roma:TableQuery id="_Query_LevelTown" table="_tab_town"/>
   <roma:TableQuery id="_query_Fact" table="_tab_fact"/>
+  <roma:TableQuery id="_Query_LevelTown" table="_tab_town"/>
   <roma:Level id="_level_town" name="Town" column="_col_town_id" nameColumn="_col_town_name">
     <memberProperties id="_memberprop" name="Capital" column="_col_town_capital"/>
   </roma:Level>
