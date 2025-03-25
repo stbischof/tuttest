@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:roma="https://www.daanse.org/spec/org.eclipse.daanse.rolap.mapping">
-  <roma:Catalog name="Cube - KPI Introduction" cubes="_cube" dbschemas="_databaseSchema"/>
+  <roma:Catalog name="Cube - KPI parent ring" cubes="_cube" dbschemas="_databaseSchema"/>
   <roma:DatabaseSchema id="_databaseSchema">
     <tables xsi:type="roma:PhysicalTable" id="_tab" name="Fact">
       <columns xsi:type="roma:PhysicalColumn" id="_col_fact_value" name="VALUE" type="Integer"/>
@@ -8,9 +8,9 @@
   </roma:DatabaseSchema>
   <roma:TableQuery id="_query" table="_tab"/>
   <roma:PhysicalCube id="_cube" name="Cube Kpi" query="_query">
-    <kpis id="_kpi_1" name="Kpi1" value="[Measures].[Measure1-Sum]"/>
+    <kpis id="_kpi_1" name="Kpi1" value="[Measures].[Measure1-Sum]" parentKpi="_kpi_3"/>
     <kpis id="_kpi_2" name="Kpi2" value="[Measures].[Measure1-Sum]" parentKpi="_kpi_1"/>
-    <kpis id="_kpi_4" name="Kpi3" displayFolder="theDisplayFolder\otherDisplayFolder" value="[Measures].[Measure1-Sum]"/>
+    <kpis id="_kpi_3" name="Kpi3" value="[Measures].[Measure1-Sum]" parentKpi="_kpi_1"/>
     <measureGroups>
       <measures id="Measure1-Sum" name="Measure1-Sum" column="_col_fact_value" aggregator="sum"/>
     </measureGroups>

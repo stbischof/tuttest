@@ -88,3 +88,8 @@ int VALUE "is null (32.0) ✔"
 
 ```
 ---
+## Validation result for catalog Cube - Minimal
+## <span style='color: blue;'>WARNING</span> : 
+|Type|   |
+|----|---|
+|DATABASE|Table: Schema must be set|

@@ -124,3 +124,14 @@ string NAME "is null (1000000000.0) ✔"
 "Fact✔" ||--o{ "Town✔" : "TOWN_ID-ID"
 ```
 ---
+## Validation result for catalog Hierarchy - Query based on seperate Tables for Fact and Dimension
+## <span style='color: red;'>ERROR</span> : 
+|Type|   |
+|----|---|
+|SCHEMA|Dimension connector override name must be set for cube with name Cube Query linked Tables|
+|SCHEMA|Hierarchy: Table field must be empty in dimension with name Town|
+|DATABASE|Hierarchy: Table value does not correspond to Hierarchy Relation  in dimension with name Town|
+## <span style='color: blue;'>WARNING</span> : 
+|Type|   |
+|----|---|
+|DATABASE|Table: Schema must be set|

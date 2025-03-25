@@ -44,4 +44,6 @@
 
 - [Cube - CalculatedMembers Intro](./tutorial.cube.calculatedmember.intro/README.MD)
 
+- [Cube - KPI parent ring](./tutorial.cube.kpi.parent.ring/README.MD)
+
 - [Cube - KPI Introduction](./tutorial.cube.kpi.intro/README.MD)

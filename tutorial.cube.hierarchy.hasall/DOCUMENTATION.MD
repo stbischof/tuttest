@@ -146,3 +146,14 @@ int VALUE "is null (32.0) ✔"
 
 ```
 ---
+## Validation result for catalog Hierarchy - HasAll-Level
+## <span style='color: red;'>ERROR</span> : 
+|Type|   |
+|----|---|
+|SCHEMA|Dimension connector override name must be set for cube with name HasAll Cube|
+|SCHEMA|Hierarchy: Table field must be empty in dimension with name Dimension1|
+|DATABASE|Hierarchy: Table value does not correspond to Hierarchy Relation  in dimension with name Dimension1|
+## <span style='color: blue;'>WARNING</span> : 
+|Type|   |
+|----|---|
+|DATABASE|Table: Schema must be set|

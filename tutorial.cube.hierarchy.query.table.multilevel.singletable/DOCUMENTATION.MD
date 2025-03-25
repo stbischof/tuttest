@@ -123,3 +123,12 @@ string COUNTRY "is null (1000000000.0) ✔"
 
 ```
 ---
+## Validation result for catalog Hierarchy - Query based on all in one Table
+## <span style='color: red;'>ERROR</span> : 
+|Type|   |
+|----|---|
+|SCHEMA|Dimension connector override name must be set for cube with name Cube Query linked Tables|
+## <span style='color: blue;'>WARNING</span> : 
+|Type|   |
+|----|---|
+|DATABASE|Table: Schema must be set|

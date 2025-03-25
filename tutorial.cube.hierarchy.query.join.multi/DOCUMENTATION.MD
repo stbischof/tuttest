@@ -160,3 +160,13 @@ int COUNTRY_ID "is null (32.0) ✔"
 "Country✔" ||--o{ "Continent✔" : "CONTINENT_ID-ID"
 ```
 ---
+## Validation result for catalog Hierarchy - Query based on a 2 Joind with 3 Levels
+## <span style='color: red;'>ERROR</span> : 
+|Type|   |
+|----|---|
+|SCHEMA|Dimension connector override name must be set for cube with name Cube Query linked Tables|
+|SCHEMA|Hierarchy : PrimaryKeyTable must be set for Join in dimension with name Continent - Country - Town|
+## <span style='color: blue;'>WARNING</span> : 
+|Type|   |
+|----|---|
+|DATABASE|Table: Schema must be set|

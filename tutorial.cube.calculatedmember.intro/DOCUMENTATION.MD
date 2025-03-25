@@ -120,3 +120,15 @@ double VALUE_NUMERIC "is null (100000.0) ✔"
 
 ```
 ---
+## Validation result for catalog Cube - CalculatedMembers Intro
+## <span style='color: red;'>ERROR</span> : 
+|Type|   |
+|----|---|
+|SCHEMA|Dimension connector override name must be set for cube with name Cube CalculatedMember|
+|SCHEMA|Hierarchy must be set for CalculatedMember with name Calculated Member 1|
+|SCHEMA|Hierarchy: Table field must be empty in dimension with name theDimension|
+|DATABASE|Hierarchy: Table value does not correspond to Hierarchy Relation  in dimension with name theDimension|
+## <span style='color: blue;'>WARNING</span> : 
+|Type|   |
+|----|---|
+|DATABASE|Table: Schema must be set|

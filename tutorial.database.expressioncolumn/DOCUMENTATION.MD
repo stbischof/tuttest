@@ -33,3 +33,8 @@ Varchar SqlExpressionColumn "is null ❌"
 
 ```
 ---
+## Validation result for catalog Database - SQL Expression Column
+## <span style='color: red;'>ERROR</span> : 
+|Type|   |
+|----|---|
+|DATABASE|Column SqlExpressionColumn does not exist in table TableWithExpressionColumn|

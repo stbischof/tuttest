@@ -1,6 +1,6 @@
 # Documentation
-### CatalogName : Cube - KPI Introduction
-### Schema Cube - KPI Introduction : 
+### CatalogName : Cube - KPI parent ring
+### Schema Cube - KPI parent ring : 
 ---
 ### Cubes :
 
@@ -61,7 +61,7 @@ int VALUE "is null (32.0) ✔"
 }
 ```
 ---
-### Cube Matrix for Cube - KPI Introduction:
+### Cube Matrix for Cube - KPI parent ring:
 ```mermaid
 quadrantChart
 title Cube Matrix
@@ -88,8 +88,9 @@ int VALUE "is null (32.0) ✔"
 
 ```
 ---
-## Validation result for catalog Cube - KPI Introduction
+## Validation result for catalog Cube - KPI parent ring
 ## <span style='color: blue;'>WARNING</span> : 
 |Type|   |
 |----|---|
+|SCHEMA|KPIs from cube with name Cube Kpi has parent ring|
 |DATABASE|Table: Schema must be set|

@@ -19,3 +19,9 @@ quadrant-4 Wide
 
 ```
 ---
+## Validation result for catalog Database - InlineTable
+## <span style='color: red;'>ERROR</span> : 
+|Type|   |
+|----|---|
+|DATABASE|Inline table row values not defined|
+|DATABASE|Inline table FACT row values not defined|
