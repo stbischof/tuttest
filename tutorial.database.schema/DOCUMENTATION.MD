@@ -40,4 +40,4 @@ Varchar theColumn "is null ❌"
 |----|---|
 |DATABASE|Column theColumn does not exist in table theTable|
 |DATABASE|Table theTable does not exist in database|
-|DATABASE|Schema org.eclipse.daanse.rolap.mapping.emf.rolapmapping.impl.DatabaseSchemaImpl@3dad535f (id: _dbschema1, description: theDescription, name: foo) does not exist|
+|DATABASE|Schema org.eclipse.daanse.rolap.mapping.emf.rolapmapping.impl.DatabaseSchemaImpl@568c9ee1 (id: _dbschema1, description: theDescription, name: foo) does not exist|
