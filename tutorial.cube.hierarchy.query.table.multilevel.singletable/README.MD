@@ -104,8 +104,8 @@ This files represent the complete definition of the catalog.
   </roma:DatabaseSchema>
   <roma:PhysicalColumn id="_col_fact_key" name="KEY"/>
   <roma:TableQuery id="_query" table="_tab_fact"/>
-  <roma:Level id="_level_country" name="Country" column="_col_fact_country"/>
   <roma:Level id="_level_town" name="Town" column="_col_fact_key"/>
+  <roma:Level id="_level_country" name="Country" column="_col_fact_country"/>
   <roma:Hierarchy id="_hierarchy_town" name="TownHierarchy" levels="_level_country _level_town" primaryKey="_col_fact_key" query="_query"/>
   <roma:StandardDimension id="_dim_town" name="Town" hierarchies="_hierarchy_town"/>
   <roma:PhysicalCube id="_cube" name="Cube Query linked Tables" query="_query">
