@@ -174,8 +174,8 @@ This files represent the complete definition of the catalog.
     <left key="_col_town_id" query="_query_LevelTown"/>
     <right key="_col_country_id" query="_query_LevelCountry"/>
   </roma:JoinQuery>
-  <roma:Level id="_level_town" name="Town" column="_col_town_id" nameColumn="_col_town_name"/>
   <roma:Level id="_level_country" name="County" column="_col_country_id" nameColumn="_col_country_name"/>
+  <roma:Level id="_level_town" name="Town" column="_col_town_id" nameColumn="_col_town_name"/>
   <roma:Hierarchy id="_hierarchy_town" name="TownHierarchy" levels="_level_town _level_country" primaryKey="_col_town_id" query="_query_LevelTownToCountry"/>
   <roma:StandardDimension id="_dim_town" name="Town" hierarchies="_hierarchy_town"/>
   <roma:PhysicalCube id="_cube" name="Cube Query linked Tables" query="_query_Fact">
