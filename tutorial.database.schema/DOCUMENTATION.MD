@@ -39,5 +39,5 @@ Varchar theColumn "is null ❌"
 |Type|   |
 |----|---|
 |DATABASE|Column theColumn does not exist in table theTable|
-|DATABASE|Schema org.eclipse.daanse.rolap.mapping.emf.rolapmapping.impl.DatabaseSchemaImpl@aa794a3 (id: _dbschema1, description: theDescription, name: foo) does not exist|
 |DATABASE|Table theTable does not exist in database|
+|DATABASE|Schema org.eclipse.daanse.rolap.mapping.emf.rolapmapping.impl.DatabaseSchemaImpl@3dad535f (id: _dbschema1, description: theDescription, name: foo) does not exist|
