@@ -29,7 +29,7 @@ This KPI is additionally using a Kpi3 as parent. We have cyrcle link here"
 
 
 ```xmi
-<roma:Kpi  id="_kpi_1" name="Kpi1" value="[Measures].[Measure1-Sum]" parentKpi="#_kpi_3"/>
+<roma:Kpi  id="_kpi_1" name="Kpi1" value="[Measures].[Measure1-Sum]" parentKpi="_kpi_3"/>
 
 ```
 
@@ -39,7 +39,7 @@ This KPI is additionally using a Kpi1 as parent.
 
 
 ```xmi
-<roma:Kpi  id="_kpi_2" name="Kpi2" value="[Measures].[Measure1-Sum]" parentKpi="#_kpi_1"/>
+<roma:Kpi  id="_kpi_2" name="Kpi2" value="[Measures].[Measure1-Sum]" parentKpi="_kpi_1"/>
 
 ```
 
@@ -49,7 +49,7 @@ This KPI is additionally using a Kpi2 as parent. And this KPI is parent for Kpi1
 
 
 ```xmi
-<roma:Kpi  id="_kpi_3" name="Kpi3" value="[Measures].[Measure1-Sum]" parentKpi="#_kpi_1"/>
+<roma:Kpi  id="_kpi_3" name="Kpi3" value="[Measures].[Measure1-Sum]" parentKpi="_kpi_1"/>
 
 ```
 
@@ -59,12 +59,12 @@ This cube holds references to the KPI, and does not use any dimensions.
 
 
 ```xmi
-<roma:PhysicalCube  id="_cube" name="Cube Kpi" query="#_query">
+<roma:PhysicalCube  id="_cube" name="Cube Kpi" query="_query">
   <kpis id="_kpi_1" name="Kpi1" value="[Measures].[Measure1-Sum]" parentKpi="_kpi_3"/>
   <kpis id="_kpi_2" name="Kpi2" value="[Measures].[Measure1-Sum]" parentKpi="_kpi_1"/>
   <kpis id="_kpi_3" name="Kpi3" value="[Measures].[Measure1-Sum]" parentKpi="_kpi_1"/>
   <measureGroups>
-    <measures id="Measure1-Sum" name="Measure1-Sum" column="#_col_fact_value" aggregator="sum"/>
+    <measures id="Measure1-Sum" name="Measure1-Sum" column="_col_fact_value" aggregator="sum"/>
   </measureGroups>
 </roma:PhysicalCube>
 

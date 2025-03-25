@@ -26,7 +26,7 @@ This example uses a TableQuery, as it directly references the physical table `Fa
 
 
 ```xmi
-<roma:TableQuery  id="_query" table="#_tab"/>
+<roma:TableQuery  id="_query" table="_tab"/>
 
 ```
 
@@ -36,7 +36,7 @@ The level is the most basic element of a hierarchy. It defines the granularity o
 
 
 ```xmi
-<roma:Level  id="_level" name="theLevel" column="#_col_key"/>
+<roma:Level  id="_level" name="theLevel" column="_col_key"/>
 
 ```
 
@@ -50,7 +50,7 @@ Additionally, a primary key column can be specified for the hierarchy. The prima
 
 
 ```xmi
-<roma:Hierarchy  id="_hierarchy" name="theHierarchy" levels="#_level" primaryKey="#_col_key" query="#_query"/>
+<roma:Hierarchy  id="_hierarchy" name="theHierarchy" levels="_level" primaryKey="_col_key" query="_query"/>
 
 ```
 
@@ -60,7 +60,7 @@ The Dimension is the main element of the cube. It defines the structure of the d
 
 
 ```xmi
-<roma:StandardDimension  id="_dimension" name="theDimension" hierarchies="#_hierarchy"/>
+<roma:StandardDimension  id="_dimension" name="theDimension" hierarchies="_hierarchy"/>
 
 ```
 
@@ -72,10 +72,10 @@ To connect the dimension to the cube, a DimensionConnector is used. The Dimensio
 
 
 ```xmi
-<roma:PhysicalCube  id="_cube" name="CubeWithSimpleDimension" query="#_query">
-  <dimensionConnectors dimension="#_dimension"/>
+<roma:PhysicalCube  id="_cube" name="CubeWithSimpleDimension" query="_query">
+  <dimensionConnectors dimension="_dimension"/>
   <measureGroups>
-    <measures id="_measure" name="theMeasure" column="#_col_value" aggregator="sum"/>
+    <measures id="_measure" name="theMeasure" column="_col_value" aggregator="sum"/>
   </measureGroups>
 </roma:PhysicalCube>
 

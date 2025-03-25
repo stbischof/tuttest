@@ -28,7 +28,7 @@ The TableQuery for the Level, as it directly references the physical table `Town
 
 
 ```xmi
-<roma:TableQuery  id="_Query_LevelTown" table="#_tab_town"/>
+<roma:TableQuery  id="_Query_LevelTown" table="_tab_town"/>
 
 ```
 
@@ -38,7 +38,7 @@ The TableQuery for the Level, as it directly references the physical table `Fact
 
 
 ```xmi
-<roma:TableQuery  id="_query_Fact" table="#_tab_fact"/>
+<roma:TableQuery  id="_query_Fact" table="_tab_fact"/>
 
 ```
 
@@ -48,7 +48,7 @@ The MemberProperty with a name `Capital`, the `propertyType` attribute `String`,
 
 
 ```xmi
-<roma:MemberProperty  id="_memberprop" name="Capital" column="#_col_town_capital"/>
+<roma:MemberProperty  id="_memberprop" name="Capital" column="_col_town_capital"/>
 
 ```
 
@@ -59,7 +59,7 @@ The `memberProperties` attribute is also set, to the before defines Capital-Memb
 
 
 ```xmi
-<roma:Level  id="_level_town" name="Town" column="#_col_town_id" nameColumn="#_col_town_name"/>
+<roma:Level  id="_level_town" name="Town" column="_col_town_id" nameColumn="_col_town_name"/>
 
 ```
 
@@ -69,7 +69,7 @@ This Hierarchy contains only one level. The `primaryKey` attribute defines the c
 
 
 ```xmi
-<roma:Hierarchy  id="_hierarchy_town" name="TownHierarchy" levels="#_level_town" primaryKey="#_col_town_id" query="#_Query_LevelTown"/>
+<roma:Hierarchy  id="_hierarchy_town" name="TownHierarchy" levels="_level_town" primaryKey="_col_town_id" query="_Query_LevelTown"/>
 
 ```
 
@@ -79,7 +79,7 @@ The Dimension has only one hierarchy.
 
 
 ```xmi
-<roma:StandardDimension  id="_dim_town" name="Town" hierarchies="#_hierarchy_town"/>
+<roma:StandardDimension  id="_dim_town" name="Town" hierarchies="_hierarchy_town"/>
 
 ```
 
@@ -91,10 +91,10 @@ To connect the dimension to the cube, a DimensionConnector is used. The dimensio
 
 
 ```xmi
-<roma:PhysicalCube  id="_cube" name="Cube Query linked Tables" query="#_query_Fact">
-  <dimensionConnectors foreignKey="#_col_fact_townId" dimension="#_dim_town"/>
+<roma:PhysicalCube  id="_cube" name="Cube Query linked Tables" query="_query_Fact">
+  <dimensionConnectors foreignKey="_col_fact_townId" dimension="_dim_town"/>
   <measureGroups>
-    <measures id="_measure" name="theMeasure" column="#_col_fact_value" aggregator="sum"/>
+    <measures id="_measure" name="theMeasure" column="_col_fact_value" aggregator="sum"/>
   </measureGroups>
 </roma:PhysicalCube>
 

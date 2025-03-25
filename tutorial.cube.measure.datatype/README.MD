@@ -24,7 +24,7 @@ This example uses a TableQuery, as it directly references the physical table `Fa
 
 
 ```xmi
-<roma:TableQuery  id="_query" table="#_tab"/>
+<roma:TableQuery  id="_query" table="_tab"/>
 
 ```
 
@@ -49,10 +49,10 @@ If the `datatype` attribute is not explicitly defined, the data type is determin
 
 
 ```xmi
-<roma:PhysicalCube  id="_cube" name="MeasuresDatatypeCube" query="#_query">
+<roma:PhysicalCube  id="_cube" name="MeasuresDatatypeCube" query="_query">
   <measureGroups>
-    <measures id="_measure1" name="Measure - Datatype Integer" column="#_col" dataType="Integer" aggregator="sum"/>
-    <measures id="_measure2" name="Measure - Datatype Numeric" column="#_col" dataType="Numeric" aggregator="sum"/>
+    <measures id="_measure1" name="Measure - Datatype Integer" column="_col" dataType="Integer" aggregator="sum"/>
+    <measures id="_measure2" name="Measure - Datatype Numeric" column="_col" dataType="Numeric" aggregator="sum"/>
   </measureGroups>
 </roma:PhysicalCube>
 

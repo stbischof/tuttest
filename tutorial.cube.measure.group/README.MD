@@ -24,7 +24,7 @@ This example uses a TableQuery, as it directly references the physical table `Fa
 
 
 ```xmi
-<roma:TableQuery  id="_query" table="#_tab"/>
+<roma:TableQuery  id="_query" table="_tab"/>
 
 ```
 
@@ -34,13 +34,13 @@ A `MeasureGroup` is a logical container designed to group related measures. Each
 
 
 ```xmi
-<roma:PhysicalCube  id="_cube" name="MeasureGroupCube" query="#_query">
+<roma:PhysicalCube  id="_cube" name="MeasureGroupCube" query="_query">
   <measureGroups name="Group Alphabetic">
-    <measures id="_measure1" name="Measure A" column="#_col" aggregator="sum"/>
-    <measures id="_measure2" name="Measure B" column="#_col" aggregator="sum"/>
+    <measures id="_measure1" name="Measure A" column="_col" aggregator="sum"/>
+    <measures id="_measure2" name="Measure B" column="_col" aggregator="sum"/>
   </measureGroups>
   <measureGroups name="Group Other">
-    <measures id="_measure3" name="Measure 1" column="#_col" aggregator="sum"/>
+    <measures id="_measure3" name="Measure 1" column="_col" aggregator="sum"/>
   </measureGroups>
 </roma:PhysicalCube>
 

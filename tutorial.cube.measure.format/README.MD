@@ -24,7 +24,7 @@ This example uses a TableQuery, as it directly references the physical table `Fa
 
 
 ```xmi
-<roma:TableQuery  id="_query" table="#_tab"/>
+<roma:TableQuery  id="_query" table="_tab"/>
 
 ```
 
@@ -37,11 +37,11 @@ In this example, multiple measures are defined. All measures reference the `VALU
 
 
 ```xmi
-<roma:PhysicalCube  id="_cube" name="MeasuresFormatCube" query="#_query">
+<roma:PhysicalCube  id="_cube" name="MeasuresFormatCube" query="_query">
   <measureGroups>
-    <measures id="_measure1" name="Format #,##0.00" formatString="#,##0.00" column="#_col" aggregator="sum"/>
-    <measures id="_measure2" name="Format #,##0" formatString="#,##0" column="#_col" aggregator="sum"/>
-    <measures id="_measure3" name="Format #,##0." formatString="#,##0." column="#_col" aggregator="sum"/>
+    <measures id="_measure1" name="Format ,##0.00" formatString=",##0.00" column="_col" aggregator="sum"/>
+    <measures id="_measure2" name="Format ,##0" formatString=",##0" column="_col" aggregator="sum"/>
+    <measures id="_measure3" name="Format ,##0." formatString=",##0." column="_col" aggregator="sum"/>
   </measureGroups>
 </roma:PhysicalCube>
 

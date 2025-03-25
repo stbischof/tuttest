@@ -44,7 +44,7 @@ The TableQuery for the Town level directly references the physical Town table.
 
 
 ```xmi
-<roma:TableQuery  id="_query_LevelTown" table="#_tab_town"/>
+<roma:TableQuery  id="_query_LevelTown" table="_tab_town"/>
 
 ```
 
@@ -54,7 +54,7 @@ The TableQuery for the Country level directly references the physical Country ta
 
 
 ```xmi
-<roma:TableQuery  id="_query_LevelCountry" table="#_tab_country"/>
+<roma:TableQuery  id="_query_LevelCountry" table="_tab_country"/>
 
 ```
 
@@ -68,8 +68,8 @@ The JoinQuery specifies which TableQueries should be joined. It also defines the
 
 ```xmi
 <roma:JoinQuery  id="_query_LevelTownToCountry">
-  <left key="#_col_town_id" query="#_query_LevelTown"/>
-  <right key="#_col_country_id" query="#_query_LevelCountry"/>
+  <left key="_col_town_id" query="_query_LevelTown"/>
+  <right key="_col_country_id" query="_query_LevelCountry"/>
 </roma:JoinQuery>
 
 ```
@@ -80,7 +80,7 @@ The TableQuery for the Level, as it directly references the physical table `Fact
 
 
 ```xmi
-<roma:TableQuery  id="_query_Fact" table="#_tab_fact"/>
+<roma:TableQuery  id="_query_Fact" table="_tab_fact"/>
 
 ```
 
@@ -90,7 +90,7 @@ The Level uses the column attribute to specify the primary key column. Additiona
 
 
 ```xmi
-<roma:Level  id="_level_town" name="Town" column="#_col_town_id" nameColumn="#_col_town_name"/>
+<roma:Level  id="_level_town" name="Town" column="_col_town_id" nameColumn="_col_town_name"/>
 
 ```
 
@@ -100,7 +100,7 @@ The Country level follows the same pattern as the Town level.
 
 
 ```xmi
-<roma:Level  id="_level_country" name="County" column="#_col_country_id" nameColumn="#_col_country_name"/>
+<roma:Level  id="_level_country" name="County" column="_col_country_id" nameColumn="_col_country_name"/>
 
 ```
 
@@ -112,7 +112,7 @@ This hierarchy consists of two levels: Town and Country.
 
 
 ```xmi
-<roma:Hierarchy  id="_hierarchy_town" name="TownHierarchy" levels="#_level_town #_level_country" primaryKey="#_col_town_id" query="#_query_LevelTownToCountry"/>
+<roma:Hierarchy  id="_hierarchy_town" name="TownHierarchy" levels="_level_town _level_country" primaryKey="_col_town_id" query="_query_LevelTownToCountry"/>
 
 ```
 
@@ -122,7 +122,7 @@ The Dimension has only one hierarchy.
 
 
 ```xmi
-<roma:StandardDimension  id="_dim_town" name="Town" hierarchies="#_hierarchy_town"/>
+<roma:StandardDimension  id="_dim_town" name="Town" hierarchies="_hierarchy_town"/>
 
 ```
 
@@ -134,10 +134,10 @@ To connect the dimension to the cube, a DimensionConnector is used. The dimensio
 
 
 ```xmi
-<roma:PhysicalCube  id="_cube" name="Cube Query linked Tables" query="#_query_Fact">
-  <dimensionConnectors foreignKey="#_col_fact_townId" dimension="#_dim_town"/>
+<roma:PhysicalCube  id="_cube" name="Cube Query linked Tables" query="_query_Fact">
+  <dimensionConnectors foreignKey="_col_fact_townId" dimension="_dim_town"/>
   <measureGroups>
-    <measures id="_measure" name="theMeasure" column="#_col_fact_value" aggregator="sum"/>
+    <measures id="_measure" name="theMeasure" column="_col_fact_value" aggregator="sum"/>
   </measureGroups>
 </roma:PhysicalCube>
 
@@ -167,15 +167,15 @@ This files represent the complete definition of the catalog.
       <columns xsi:type="roma:PhysicalColumn" id="_col_country_name" name="NAME"/>
     </tables>
   </roma:DatabaseSchema>
-  <roma:TableQuery id="_query_LevelCountry" table="_tab_country"/>
-  <roma:TableQuery id="_query_LevelTown" table="_tab_town"/>
   <roma:TableQuery id="_query_Fact" table="_tab_fact"/>
+  <roma:TableQuery id="_query_LevelTown" table="_tab_town"/>
+  <roma:TableQuery id="_query_LevelCountry" table="_tab_country"/>
   <roma:JoinQuery id="_query_LevelTownToCountry">
     <left key="_col_town_id" query="_query_LevelTown"/>
     <right key="_col_country_id" query="_query_LevelCountry"/>
   </roma:JoinQuery>
-  <roma:Level id="_level_country" name="County" column="_col_country_id" nameColumn="_col_country_name"/>
   <roma:Level id="_level_town" name="Town" column="_col_town_id" nameColumn="_col_town_name"/>
+  <roma:Level id="_level_country" name="County" column="_col_country_id" nameColumn="_col_country_name"/>
   <roma:Hierarchy id="_hierarchy_town" name="TownHierarchy" levels="_level_town _level_country" primaryKey="_col_town_id" query="_query_LevelTownToCountry"/>
   <roma:StandardDimension id="_dim_town" name="Town" hierarchies="_hierarchy_town"/>
   <roma:PhysicalCube id="_cube" name="Cube Query linked Tables" query="_query_Fact">

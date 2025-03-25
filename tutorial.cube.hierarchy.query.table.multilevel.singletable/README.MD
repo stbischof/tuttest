@@ -24,7 +24,7 @@ The TableQuery for the Levels and the Measure.
 
 
 ```xmi
-<roma:TableQuery  id="_query" table="#_tab_fact"/>
+<roma:TableQuery  id="_query" table="_tab_fact"/>
 
 ```
 
@@ -34,7 +34,7 @@ The level of the Town used the `column` attribute to define the column that hold
 
 
 ```xmi
-<roma:Level  id="_level_town" name="Town" column="#_col_fact_key"/>
+<roma:Level  id="_level_town" name="Town" column="_col_fact_key"/>
 
 ```
 
@@ -44,7 +44,7 @@ The level  of the Country used the `column` attribute to define the column that 
 
 
 ```xmi
-<roma:Level  id="_level_country" name="Country" column="#_col_fact_country"/>
+<roma:Level  id="_level_country" name="Country" column="_col_fact_country"/>
 
 ```
 
@@ -56,7 +56,7 @@ The order of the Levels in the hierarchy is important, as it determines the dril
 
 
 ```xmi
-<roma:Hierarchy  id="_hierarchy_town" name="TownHierarchy" levels="#_level_country #_level_town" primaryKey="#_col_fact_key" query="#_query"/>
+<roma:Hierarchy  id="_hierarchy_town" name="TownHierarchy" levels="_level_country _level_town" primaryKey="_col_fact_key" query="_query"/>
 
 ```
 
@@ -66,7 +66,7 @@ The Dimension has only one hierarchy.
 
 
 ```xmi
-<roma:StandardDimension  id="_dim_town" name="Town" hierarchies="#_hierarchy_town"/>
+<roma:StandardDimension  id="_dim_town" name="Town" hierarchies="_hierarchy_town"/>
 
 ```
 
@@ -78,10 +78,10 @@ To connect the dimension to the cube, a DimensionConnector is used. The dimensio
 
 
 ```xmi
-<roma:PhysicalCube  id="_cube" name="Cube Query linked Tables" query="#_query">
-  <dimensionConnectors foreignKey="#_col_fact_country" dimension="#_dim_town"/>
+<roma:PhysicalCube  id="_cube" name="Cube Query linked Tables" query="_query">
+  <dimensionConnectors foreignKey="_col_fact_country" dimension="_dim_town"/>
   <measureGroups>
-    <measures id="_measure" name="theMeasure" column="#_col_fact_value" aggregator="sum"/>
+    <measures id="_measure" name="theMeasure" column="_col_fact_value" aggregator="sum"/>
   </measureGroups>
 </roma:PhysicalCube>
 

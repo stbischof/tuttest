@@ -28,7 +28,7 @@ It is more secure to explicitly define the schema using the `name` attribute. To
 Schema can be refernced in the catalog. You can see this by checking the `dbSchema attribute` in the catalog.
 
 ```xmi
-<roma:Catalog  id="_cat" name="Database - Schema" dbschemas="#_dbschema2 #_dbschema1"/>
+<roma:Catalog  id="_cat" name="Database - Schema" dbschemas="_dbschema2 _dbschema1"/>
 
 ```
 

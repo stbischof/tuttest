@@ -26,7 +26,7 @@ This example uses a TableQuery, as it directly references the physical table Fac
 
 
 ```xmi
-<roma:TableQuery  id="_query" table="#_tab"/>
+<roma:TableQuery  id="_query" table="_tab"/>
 
 ```
 
@@ -40,11 +40,11 @@ All measures use sum aggregation.
 
 
 ```xmi
-<roma:PhysicalCube  id="_cube" name="MultipleMeasuresCube" defaultMeasure="roma:Measure _measure3" query="#_query">
+<roma:PhysicalCube  id="_cube" name="MultipleMeasuresCube" defaultMeasure="roma:Measure _measure3" query="_query">
   <measureGroups>
-    <measures id="_measure1" name="Sum of Value1" column="#_col_value1" aggregator="sum"/>
-    <measures id="_measure2" name="Sum of Value2" column="#_col_value2" aggregator="sum"/>
-    <measures id="_measure3" name="Sum of Value3" column="#_col_value3" aggregator="sum"/>
+    <measures id="_measure1" name="Sum of Value1" column="_col_value1" aggregator="sum"/>
+    <measures id="_measure2" name="Sum of Value2" column="_col_value2" aggregator="sum"/>
+    <measures id="_measure3" name="Sum of Value3" column="_col_value3" aggregator="sum"/>
   </measureGroups>
 </roma:PhysicalCube>
 

@@ -24,7 +24,7 @@ This example uses a TableQuery, as it directly references the physical table `Fa
 
 
 ```xmi
-<roma:TableQuery  id="_query" table="#_tab"/>
+<roma:TableQuery  id="_query" table="_tab"/>
 
 ```
 
@@ -38,12 +38,12 @@ In this example, multiple measures are defined. All measures reference the `VALU
 
 
 ```xmi
-<roma:PhysicalCube  id="_cube" name="MeasuresAggregatorsCube" query="#_query">
+<roma:PhysicalCube  id="_cube" name="MeasuresAggregatorsCube" query="_query">
   <measureGroups>
-    <measures id="_measure1" name="Sum of Value" column="#_col" aggregator="sum"/>
-    <measures id="_measure2" name="Max of Value" column="#_col" aggregator="max"/>
-    <measures id="_measure3" name="Min of Value" column="#_col" aggregator="min"/>
-    <measures id="_measure4" name="Avg of Value" column="#_col" aggregator="avg"/>
+    <measures id="_measure1" name="Sum of Value" column="_col" aggregator="sum"/>
+    <measures id="_measure2" name="Max of Value" column="_col" aggregator="max"/>
+    <measures id="_measure3" name="Min of Value" column="_col" aggregator="min"/>
+    <measures id="_measure4" name="Avg of Value" column="_col" aggregator="avg"/>
   </measureGroups>
 </roma:PhysicalCube>
 
