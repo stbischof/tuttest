@@ -84,7 +84,7 @@ DOUBLE (or DOUBLE PRECISION) – Double-precision (64-bit) floating-point number
 INTEGER are the whole number type, typically 32-bit, used for exact, non-decimal values.
 
 ```xmi
-<roma:PhysicalColumn  id="_col8" name="ColumnIneger" type="Integer"/>
+<roma:PhysicalColumn  id="_col8" name="ColumnInteger" type="Integer"/>
 
 ```
 
@@ -106,7 +106,7 @@ This files represent the complete definition of the catalog.
       <columns xsi:type="roma:PhysicalColumn" id="_col5" name="ColumnFloat" type="Float"/>
       <columns xsi:type="roma:PhysicalColumn" id="_col6" name="ColumnReal" type="Real"/>
       <columns xsi:type="roma:PhysicalColumn" id="_col7" name="ColumnDouble" type="Double"/>
-      <columns xsi:type="roma:PhysicalColumn" id="_col8" name="ColumnIneger" type="Integer"/>
+      <columns xsi:type="roma:PhysicalColumn" id="_col8" name="ColumnInteger" type="Integer"/>
     </tables>
   </roma:DatabaseSchema>
 </xmi:XMI>
@@ -120,4 +120,6 @@ More information and visualisations about this Catalog you can find in the [Docu
 
 
 This files represent the data in the tables.
+
+- [TableWithColumnTypes](./data/TableWithColumnTypes.csv)
 

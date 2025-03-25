@@ -31,9 +31,9 @@
 }}%%
 erDiagram
 c0["MeasuresFormatCube"]{
-M Format_#,##0_00 ""
-M Format_#,##0 ""
-M Format_#,##0_ ""
+M Format_x_xx0_00 ""
+M Format_x_xx0 ""
+M Format_x_xx0_ ""
 }
 ```
 ---
@@ -90,3 +90,8 @@ int VALUE "is null (32.0) ✔"
 
 ```
 ---
+## Validation result for catalog Cube - Measures and Formats
+## <span style='color: blue;'>WARNING</span> : 
+|Type|   |
+|----|---|
+|DATABASE|Table: Schema must be set|

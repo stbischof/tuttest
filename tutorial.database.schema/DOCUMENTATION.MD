@@ -34,3 +34,10 @@ Varchar theColumn "is null ❌"
 
 ```
 ---
+## Validation result for catalog Database - Schema
+## <span style='color: red;'>ERROR</span> : 
+|Type|   |
+|----|---|
+|DATABASE|Column theColumn does not exist in table theTable|
+|DATABASE|Table theTable does not exist in database|
+|DATABASE|Schema org.eclipse.daanse.rolap.mapping.emf.rolapmapping.impl.DatabaseSchemaImpl@6c6920e1 (id: _dbschema1, description: theDescription, name: foo) does not exist|

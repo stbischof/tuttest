@@ -15,10 +15,11 @@ The InlineTable is a virtual table. The table and data does not exist in the dat
   <rows>
     <rowValues column="roma:PhysicalColumn Fact_KEY" value="A"/>
     <rowValues column="roma:PhysicalColumn Fact_VALUE" value="100"/>
+  </rows>
+  <rows>
     <rowValues column="roma:PhysicalColumn Fact_KEY" value="B"/>
     <rowValues column="roma:PhysicalColumn Fact_VALUE" value="42"/>
   </rows>
-  <rows/>
 </roma:InlineTable>
 
 ```
@@ -39,10 +40,11 @@ This files represent the complete definition of the catalog.
       <rows>
         <rowValues column="Fact_KEY" value="A"/>
         <rowValues column="Fact_VALUE" value="100"/>
+      </rows>
+      <rows>
         <rowValues column="Fact_KEY" value="B"/>
         <rowValues column="Fact_VALUE" value="42"/>
       </rows>
-      <rows/>
     </tables>
   </roma:DatabaseSchema>
 </xmi:XMI>

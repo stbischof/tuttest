@@ -51,7 +51,7 @@ c0["CubeWithSimpleDimension"]{
 M theMeasure ""
 D _ ""
 }
-d00[""] {
+d00["theDimension"] {
 H theHierarchy ""
 }
 h000["theHierarchy"] {
@@ -114,3 +114,8 @@ int VALUE "is null (32.0) ✔"
 
 ```
 ---
+## Validation result for catalog Dimension - Introduction
+## <span style='color: blue;'>WARNING</span> : 
+|Type|   |
+|----|---|
+|DATABASE|Table: Schema must be set|

@@ -19,3 +19,22 @@ quadrant-4 Wide
 
 ```
 ---
+### Database :
+---
+```mermaid
+---
+title: Diagram;
+---
+erDiagram
+"TableWithExpressionColumn❌"{
+string column1 "is null (1000000000.0) ✔"
+Varchar SqlExpressionColumn "is null ❌"
+}
+
+```
+---
+## Validation result for catalog Database - SQL Expression Column
+## <span style='color: red;'>ERROR</span> : 
+|Type|   |
+|----|---|
+|DATABASE|Column SqlExpressionColumn does not exist in table TableWithExpressionColumn|

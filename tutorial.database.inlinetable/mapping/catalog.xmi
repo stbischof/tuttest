@@ -8,10 +8,11 @@
       <rows>
         <rowValues column="Fact_KEY" value="A"/>
         <rowValues column="Fact_VALUE" value="100"/>
+      </rows>
+      <rows>
         <rowValues column="Fact_KEY" value="B"/>
         <rowValues column="Fact_VALUE" value="42"/>
       </rows>
-      <rows/>
     </tables>
   </roma:DatabaseSchema>
 </xmi:XMI>

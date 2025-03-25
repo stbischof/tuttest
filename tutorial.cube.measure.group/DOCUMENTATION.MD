@@ -1,6 +1,6 @@
 # Documentation
-### CatalogName : Cube - Measures and Formats
-### Schema Cube - Measures and Formats : 
+### CatalogName : Cube - Measures and MeasureGroups
+### Schema Cube - Measures and MeasureGroups : 
 ---
 ### Cubes :
 
@@ -62,7 +62,7 @@ int VALUE "is null (32.0) ✔"
 }
 ```
 ---
-### Cube Matrix for Cube - Measures and Formats:
+### Cube Matrix for Cube - Measures and MeasureGroups:
 ```mermaid
 quadrantChart
 title Cube Matrix
@@ -90,3 +90,8 @@ int VALUE "is null (32.0) ✔"
 
 ```
 ---
+## Validation result for catalog Cube - Measures and MeasureGroups
+## <span style='color: blue;'>WARNING</span> : 
+|Type|   |
+|----|---|
+|DATABASE|Table: Schema must be set|

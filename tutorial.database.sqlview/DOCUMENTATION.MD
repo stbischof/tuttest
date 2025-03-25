@@ -19,3 +19,19 @@ quadrant-4 Wide
 
 ```
 ---
+### Database :
+---
+```mermaid
+---
+title: Diagram;
+---
+erDiagram
+"table✔"{
+string c "is null (1000000000.0) ✔"
+}
+"sqlview❌"{
+Varchar ColumnOne "is null ❌"
+}
+
+```
+---

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:roma="https://www.daanse.org/spec/org.eclipse.daanse.rolap.mapping">
+  <roma:Catalog name="Level - MemberProperties Intro" cubes="_cube" dbschemas="_dbschema"/>
+  <roma:DatabaseSchema id="_dbschema">
+    <tables xsi:type="roma:PhysicalTable" id="_tab_fact" name="Fact">
+      <columns xsi:type="roma:PhysicalColumn" id="_col_fact_townId" name="TOWN_ID" type="Integer"/>
+      <columns xsi:type="roma:PhysicalColumn" id="_col_fact_value" name="VALUE" type="Integer"/>
+    </tables>
+    <tables xsi:type="roma:PhysicalTable" id="_tab_town" name="Town">
+      <columns xsi:type="roma:PhysicalColumn" id="_col_town_id" name="ID" type="Integer"/>
+      <columns xsi:type="roma:PhysicalColumn" id="_col_town_name" name="NAME"/>
+    </tables>
+  </roma:DatabaseSchema>
+  <roma:PhysicalColumn id="_col_town_capital" name="CAPITAL" columnSize="100"/>
+  <roma:TableQuery id="_query_Fact" table="_tab_fact"/>
+  <roma:TableQuery id="_Query_LevelTown" table="_tab_town"/>
+  <roma:Level id="_level_town" name="Town" column="_col_town_id" nameColumn="_col_town_name">
+    <memberProperties id="_memberprop" name="Capital" column="_col_town_capital"/>
+  </roma:Level>
+  <roma:Hierarchy id="_hierarchy_town" name="TownHierarchy" levels="_level_town" primaryKey="_col_town_id" query="_Query_LevelTown"/>
+  <roma:StandardDimension id="_dim_town" name="Town" hierarchies="_hierarchy_town"/>
+  <roma:PhysicalCube id="_cube" name="Cube Query linked Tables" query="_query_Fact">
+    <dimensionConnectors foreignKey="_col_fact_townId" dimension="_dim_town"/>
+    <measureGroups>
+      <measures id="_measure" name="theMeasure" column="_col_fact_value" aggregator="sum"/>
+    </measureGroups>
+  </roma:PhysicalCube>
+</xmi:XMI>

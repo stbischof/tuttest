@@ -35,3 +35,8 @@ Varchar ColumnOne "is null ❌"
 
 ```
 ---
+## Validation result for catalog Database - Table
+## <span style='color: red;'>ERROR</span> : 
+|Type|   |
+|----|---|
+|DATABASE|Table ViewOne does not exist in database|
