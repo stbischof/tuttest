@@ -41,12 +41,12 @@ Eclipse Daanse ist ein vollständig clientseitiger Dashboard-Editor und Viewer, 
 ## 🧩 Verfügbare Widgets
 ### Basis-Widgets
 - Rahmen, Abrundungen, Schatten sowie Transparenzen von Hintergrund und Schrift können individuell eingestellt werden. Farben und Schattenverläufe lassen sich zudem dynamisch über Variablen steuern – etwa abhängig von der Tageszeit. So kann beispielsweise die Ausrichtung und Länge eines Schattens oder die Helligkeit eines Widgets automatisch dem Sonnenstand angepasst werden.
+- *Farben, Schatten und Transparenz dynamisch nach Uhrzeit und Variablen steuerbar.*
 
 ### Chart-Widgets
-- **Balkendiagramme** (Bar Chart)
-- **Liniendiagramme** (Line Chart)
-- **Kreisdiagramme** (Pie Chart)
-- *Farben, Schatten und Transparenz dynamisch nach Uhrzeit und Variablen steuerbar.*
+- Balkendiagramme 
+- Liniendiagramme 
+- Kreisdiagramme 
 
 ### Datentabellen
 - Sortierung und Filterung pro Spalte
@@ -109,6 +109,7 @@ Eclipse Daanse ist ein vollständig clientseitiger Dashboard-Editor und Viewer, 
   - OGC Features (Geo-Objekte mit Attributen)
   - SensorThings-Standorten
   - CSV- und CML-Datenquellen
+  - XMLA
 - Individuelles Styling für alle Layer (Färbung, Transpartenz, Icons, Linien, Flächen, Sensorwerte)
 - alle Layer gemeinsam darstellbar
 
@@ -144,7 +145,6 @@ Eclipse Daanse ist ein vollständig clientseitiger Dashboard-Editor und Viewer, 
 - Ausführung von SQL-Statements über XMLA-Protokoll
 - Rollenbasiertes Rechtemanagement
 - Sicherheitsfunktionen gegen Missbrauch
-
 
 ### REST CSV
 - REST-Schnittstelle zum Import von CSV-Dateien
@@ -293,6 +293,10 @@ So kann beispielsweise jede Fraktion eines Stadtrats ihr eigenes Dashboard erste
 
 - **Word Cloud aus OLAP-Daten**  
   Generierung dynamischer Wortwolken aus Textfeldern oder aggregierten Inhalten eines Datenwürfels – filterbar nach OLAP-Dimensionen.
+
+- **3D-Cube-Verteilungsdiagramm** 
+  Visualisierung der Datenverteilung innerhalb eines OLAP-Cubes in Form eines dreidimensionalen Würfels. Dabei repräsentieren die Dimensionen des Würfels die Achsen des Datenraums, während die Größe oder Farbe einzelner Elemente (z. B. Würfelzellen) die Ausprägung eines bestimmten Measures (z. B. Anzahl, Summe, Durchschnitt) darstellen.
+  Diese Darstellung ermöglicht ein intuitives Verständnis darüber, wie sich Werte im Cube verteilen, und hilft dabei, Konzentrationen, Lücken oder Muster in den Daten visuell zu erfassen.
 
 ### 🎨 Layout & Styles
 
