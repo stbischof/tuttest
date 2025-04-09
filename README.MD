@@ -4,22 +4,37 @@ Eclipse Daanse ist ein vollständig clientseitiger Dashboard-Editor und Viewer, 
 
 ---
 
-## 🌟 Vorteile im Überblick
+## 🆚 Vergleich Eclipse Daanse vs. Grafana vs. Apache Superset
 
 | Merkmal | Eclipse Daanse | Grafana | Apache Superset |
 |--------|----------------|---------|------------------|
-| Serverfreie Architektur | ✅ | ❌ | ❌ |
-| Direkte Nutzung offener Schnittstellen | ✅ | ⚠️ oft nur mit eigenem Backend | ⚠️ teilweise |
-| Granulare Widgetgestaltung | ✅ pixelgenau & responsive | ⚠️ begrenzt | ⚠️ begrenzt |
-| Datenverbindungen kombinierbar | ✅ auch live + historisch + statisch | ⚠️ nur über Plugins | ⚠️ mit SQL |
-| Vollständig offlinefähig | ✅ PWA/Desktop | ❌ | ❌ |
-| SensorThings API (Live, Historie, Stammdaten) | ✅ nativ | ⚠️ Plugins | ❌ |
-| Kartenclient (OGC Maps, Features etc.) | ✅ | ⚠️ eingeschränkt | ⚠️ kaum vorhanden |
-| OLAP / BI über XMLA | ✅ | ⚠️ über Plugin | ⚠️ experimentell |
-| *Git-Integration zur Nachvollziehbarkeit* | ✅ | ❌ | ❌ |
-| *Open Data Registry Integration (DCAT)* | ✅ | ❌ | ❌ |
+| **Open Source** | ✅ | ✅ | ✅ |
+| **Server notwendig** | ❌ | ✅ | ✅ |
+| **Datenverarbeitung im Browser (Client only)** | ✅ | ❌ | ❌ |
+| **Responsive & pixelgenaue Dashboards** | ✅ | ⚠️ begrenzt | ⚠️ begrenzt |
+| **Komplexe Layouts & Templates** | ✅ | ⚠️ Plugin-basiert | ⚠️ beschränkt |
+| **Datenquellen kombinierbar (live, historisch, statisch)** | ✅ | ⚠️ nur über Plugins | ⚠️ mit SQL |
+| **Offlinefähig / Desktop App (PWA, Flatpak, etc.)** | ✅ | ⚠️ begrenzt | ❌ |
+| **Visualisierung von SVGs (auch repeatable)** | ✅ | ❌ | ❌ |
+| **Text-Widgets mit Variablen (Text & RichText)** | ✅ | ⚠️ beschränkt | ⚠️ beschränkt |
+| **Diagramme (Bar, Line, Pie)** | ✅ | ✅ | ✅ |
+| **Interaktive Tabellen mit Filter/Sortierung/Export** | ✅ | ⚠️ | ✅ |
+| **PivotTables (OLAP Cube Visualisierung)** | ✅ | ⚠️ (via Plugin) | ⚠️ (teilweise) |
+| **Icons, Bilder & Videos als Widgets** | ✅ | ⚠️ eingeschränkt | ⚠️ |
+| **Progressbars & KPI-Gauges** | ✅ | ⚠️ mit Plugin | ⚠️ |
+| **Kartenintegration (OGC Maps & Features)** | ✅ | ⚠️ Plugin-abhängig | ⚠️ kaum |
+| **MQTT/WebSocket Unterstützung (nativ)** | ✅ | ⚠️ (nur Plugins) | ❌ |
+| **SensorThings API (Live, Historie, Stammdaten)** | ✅ | ⚠️ experimentell | ❌ |
+| **REST (CSV/JSON/XML)** | ✅ | ✅ | ✅ |
+| **SPARQL / RDF / Linked Open Data** | ✅ | ❌ | ⚠️ experimentell |
+| **GraphQL (inkl. Subscription geplant)** | ✅ | ⚠️ | ⚠️ |
+| **XMLA für OLAP-Cubes** | ✅ | ⚠️ Plugin-abhängig | ⚠️ experimentell |
+| **SQL über XMLA mit Rechtemanagement** | ✅ | ❌ | ❌ |
+| **Integration von Open Data Registries (DCAT)** | ✅ | ❌ | ❌ |
+| **Git-Versionierung für Dashboards** | ✅ | ❌ | ❌ |
+| **Datenschutz ohne doppeltes Rechtemanagement** | ✅ | ❌ | ❌ |
 
----
+------
 
 ## 🖼️ Dashboards
 
@@ -442,35 +457,6 @@ Beispiel: Eine Schaltfläche wechselt zwischen verschiedenen Objekten, indem ein
 - *Modellbasierter Editor mit Drag-and-Drop*
 
 ---
-
-## 🆚 Vergleich mit Grafana & Superset
-
-| Kriterium | Eclipse Daanse | Grafana | Superset |
-|----------|----------------|---------|----------|
-| Open Source | ✅ | ✅ | ✅ |
-| Server notwendig | ❌ | ✅ | ✅ |
-| Daten direkt im Browser verarbeitet | ✅ | ❌ | ❌ |
-| DCAT/OpenData Registry | ✅ | ❌ | ❌ |
-| MQTT/WebSocket Unterstützung | ✅ | ⚠️ (nur mit Plugins) | ❌ |
-| SensorThings API | ✅ | ⚠️ Plugins | ❌ |
-| SPARQL/RDF | ✅ | ❌ | ⚠️ experimentell |
-| Visualisierung von SVGs | ✅ | ❌ | ❌ |
-| Kartenclient (OGC-konform) | ✅ | ⚠️ begrenzt | ⚠️ kaum vorhanden |
-| XMLA & OLAP-Datenquellen | ✅ | ⚠️ experimentell | ⚠️ experimentell |
-| Git-basierte Historie | ✅ | ❌ | ❌ |
-| Vollständig responsives Layout | ✅ | ⚠️ | ⚠️ |
-| Desktop App möglich | ✅ | ⚠️ | ❌ |
-
----
-
-## 🚀 Fazit
-
-**Eclipse Daanse** ist keine bloße Dashboard-Alternative, sondern ein **komplett neu gedachtes Visualisierungs-Framework**, das alle Anforderungen moderner Datenplattformen – insbesondere im Open- und Urban-Data-Kontext – erfüllt:
-
-- **Datenschutzkonform**, **granular**, **hochflexibel**, **vollständig clientbasiert**.
-- Kein Vendor-Lock-In, keine Serverkosten, volle Kontrolle.
-
-> *Wer Open Data wirklich offen nutzen will, braucht eine Lösung wie Daanse.*
 
 ## 🚀 Fazit
 
